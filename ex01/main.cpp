@@ -6,7 +6,7 @@
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 20:19:28 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/18 20:43:39 by subpark          ###   ########.fr       */
+/*   Updated: 2024/03/18 21:20:51 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int main()
     if (!Attack_N_Attacked(B, A, 3))
         return (0);
     A.beRepaired(3);
+    C.guardGate();
     if(!Attack_N_Attacked(A, B, 9))
         return (0);
     if (!Attack_N_Attacked(C, B, 10))

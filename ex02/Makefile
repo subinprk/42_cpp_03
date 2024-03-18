@@ -6,12 +6,12 @@
 #    By: subpark <subpark@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/15 20:19:31 by subpark           #+#    #+#              #
-#    Updated: 2024/03/18 20:27:49 by subpark          ###   ########.fr        #
+#    Updated: 2024/03/18 21:13:35 by subpark          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
-HDRS = ClapTrap.hpp ScavTrap.hpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+HDRS = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 RM = rm -f
