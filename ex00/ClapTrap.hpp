@@ -6,7 +6,7 @@
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 20:19:26 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/15 20:39:21 by subpark          ###   ########.fr       */
+/*   Updated: 2024/03/18 16:09:47 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,15 @@ class ClapTrap
         int         _energy_points;
         int         _attack_damage;
     public:
+        ClapTrap(const std::string name);
+        ClapTrap();
+        ~ClapTrap();
         void attack(const std::string &target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
-        ClapTrap(const std::string name): _name(name), _hit_points(10),
-                            _energy_points(10), _attack_damage(10);
-        ClapTrap() = default;
         std::string get_name();
+        int         get_energy_po();
+        int         get_hit_po();
+        int         get_attack_da();
+        int         put_attack_da(int   attack_po);
 };
