@@ -6,25 +6,20 @@
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 20:19:41 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/18 20:21:48 by subpark          ###   ########.fr       */
+/*   Updated: 2024/03/18 20:56:06 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap()
+ClapTrap::ClapTrap(void): _name("default"), _hit_points(100), _energy_points(50), _attack_damage(20)
 {
-    std::cout << "have to put name when you call constructor \n";
-    _name = "";
+	std::cout << "ClapTrap " << this->_name << " created with default constructor." << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name)
+ClapTrap::ClapTrap(std::string const &name): _name(name), _hit_points(100), _energy_points(50), _attack_damage(20)
 {
-    _name = name;
-    _hit_points = 10;
-    _energy_points = 10;
-    _attack_damage = 0;
-    std::cout << "Constructor \n";
+	std::cout << "ClapTrap " << this->_name << " created." << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy)
@@ -35,9 +30,8 @@ ClapTrap::ClapTrap(const ClapTrap &copy)
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Destructor of " << _name << std::endl;
+    std::cout << "Destructor of ClapTrap " << _name << std::endl;
 }
-
 
 void ClapTrap::attack(const std::string &target)
 {
@@ -95,6 +89,21 @@ int ClapTrap::put_attack_da(int attack_po)
     }
     _attack_damage = _attack_damage + attack_po;
     return (1);
+}
+
+void ClapTrap::put_name(std::string name)
+{
+    _name = name;
+}
+
+void ClapTrap::put_hit_points(unsigned int hit)
+{
+    _hit_points = hit;
+}
+
+void ClapTrap::put_energy_points(unsigned int energy)
+{
+    _energy_points = energy;
 }
 
 std::string ClapTrap::get_name()

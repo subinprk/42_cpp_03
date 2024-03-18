@@ -6,10 +6,11 @@
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 20:19:26 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/18 19:57:22 by subpark          ###   ########.fr       */
+/*   Updated: 2024/03/18 20:38:26 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef CLAPTRAP_CPP
 #define CLAPTRAP_CPP
 #include <string>
 #include <iostream>
@@ -22,7 +23,7 @@ class ClapTrap
         int         _energy_points;
         int         _attack_damage;
     public:
-        ClapTrap(const std::string name);
+        ClapTrap(const std::string &name);
         ClapTrap();
         ClapTrap(const ClapTrap &copy);
         ~ClapTrap();
@@ -35,4 +36,9 @@ class ClapTrap
         int         get_hit_po();
         int         get_attack_da();
         int         put_attack_da(int   attack_po);
+        void        put_name(std::string name);
+        void        put_hit_points(unsigned int hit);
+        void        put_energy_points(unsigned int energy);
 };
+
+#endif
