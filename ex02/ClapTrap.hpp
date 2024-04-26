@@ -6,7 +6,7 @@
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 20:19:26 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/18 20:38:26 by subpark          ###   ########.fr       */
+/*   Updated: 2024/04/26 17:42:52 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-    private:
+    protected:
         std::string _name;
         int         _hit_points;
         int         _energy_points;

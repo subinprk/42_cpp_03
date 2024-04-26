@@ -6,7 +6,7 @@
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 16:30:17 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/18 20:53:24 by subpark          ###   ########.fr       */
+/*   Updated: 2024/04/26 17:42:37 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,18 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &copy)
     std::cout << "Assignment operator ScavTrap is called\n";
     ClapTrap::operator=(copy);
     return (*this);
+}
+
+void ScavTrap::attack(const std::string &target)
+{
+    std::cout << "ScavTrap Attacking: ";
+    if (_hit_points <= 0 || _energy_points <= 0)
+    {
+        std::cout << _name << " is already dead " << std::endl;
+        return ;
+    }
+    if (_attack_damage > 0)
+    std::cout << _name <<" attacks "<< target <<", causing "
+        << _attack_damage << std::endl;
+    _energy_points --;
 }

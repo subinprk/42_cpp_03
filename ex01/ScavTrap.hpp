@@ -6,7 +6,7 @@
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 16:30:10 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/18 21:07:04 by subpark          ###   ########.fr       */
+/*   Updated: 2024/04/26 17:40:17 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,8 @@ class ScavTrap : public ClapTrap
         ~ScavTrap();
         ScavTrap(ScavTrap const &copy);
         void    guardGate();
+        void    attack(const std::string &target);
+        // void    takeDamage(unsigned int amount);
+        // void    beRepaired(unsigned int amount);
         ScavTrap &operator=(const ScavTrap &copy);
 };
